@@ -23,7 +23,7 @@ To install dependencies, run:
 
 ## Usage
 
-Propagating the changes made to the database models into your database schema:
+Propagate the changes made to the database models into your database schema:
 * python manage.py makemigrations
 * python manage.py migrate
 
