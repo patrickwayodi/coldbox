@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+
+
+<html lang="en">
+
+
+{% include "assets/head.html" %}
+
+
+<body>
+
+
+    {% include "assets/navbar.html" %}
+
+    <main>
+
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+    {% include "assets/footer.html" %}
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+
+
+</html>

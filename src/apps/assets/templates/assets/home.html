@@ -1,0 +1,67 @@
+{% extends "assets/base.html" %}
+
+
+<!-- Coldbox's Assets index -->
+<!-- Add some Bootstrap cards later on -->
+
+
+{% block title %}Coldbox{% endblock %}
+
+
+{% block content %}
+
+
+
+<!-- Page Content -->
+<div class="container">
+
+<div class="row">
+
+
+  <!-- Column on the extreme left of the page for formatting purposes-->
+  <div class="col-md-1">
+  </div>
+
+  
+  <!-- Post Content Column -->
+  <div class="col-md-10">            
+
+    <!-- Title -->
+    <h2 class="mt-4">Assets</h2>
+
+    <hr>
+
+
+    <!-- Post Content -->           
+
+    <ul class="list-group">
+
+        {% for asset in assets %}
+        <li class="list-group-item list-group-item-secondary">
+                {{ asset.date.year }}:
+                <a href="{{ asset.get_absolute_url }}">{{ asset.white }} {{ asset.result }} {{ asset.black }}</a>
+        </li>
+        {% endfor %}
+    
+    </ul>
+
+    
+    <hr>   
+
+
+  </div>
+
+
+  <!-- Column on the extreme right of the page for formatting purposes-->
+  <div class="col-md-1">  
+  </div>
+
+    
+</div>
+<!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+
+{% endblock %}
