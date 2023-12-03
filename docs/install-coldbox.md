@@ -15,11 +15,11 @@ sudo apt-get install python
 
 
 ## Create a virtual environment 
-python3 -m venv ~/virtualenvs/grokmixdev
+python3 -m venv ~/virtualenvs/coldbox
 
 
 ## Activate the virtualenv
-source ~/virtualenvs/grokmixdev/bin/activate
+source ~/virtualenvs/coldbox/bin/activate
 
 
 ## Install Coldbox's dependencies.
