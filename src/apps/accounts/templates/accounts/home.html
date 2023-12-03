@@ -1,1 +1,26 @@
+{% extends "accounts/base.html" %}
 
+{% block title %}Home v2{% endblock %}
+
+
+{% block content %}
+
+
+<h1>Coldbox</h1>
+
+
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+  <p><a href="{% url 'logout' %}">Log Out</a></p>
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">Log In</a> |
+  <a href="{% url 'signup' %}">Sign Up</a>
+{% endif %}
+
+
+</br></br>
+<a href="http://127.0.0.1:8000/assets/">Assets</a>
+
+
+{% endblock %}
