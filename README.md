@@ -1,7 +1,7 @@
 Coldbox
 =======
 
-Coldbox is a document management system that can allocate different permissions to the 
+Coldbox is an asset management system that can allocate different permissions to the 
 respective users.
 
 Coldbox is wriiten in Python using the Django framework.
