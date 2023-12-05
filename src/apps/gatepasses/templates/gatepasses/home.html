@@ -1,1 +1,67 @@
+{% extends "gatepasses/base.html" %}
 
+
+<!-- Coldbox's Gatepasses index -->
+<!-- Add some Bootstrap cards later on -->
+
+
+{% block title %}Coldbox{% endblock %}
+
+
+{% block content %}
+
+
+
+<!-- Page Content -->
+<div class="container">
+
+<div class="row">
+
+
+  <!-- Column on the extreme left of the page for formatting purposes-->
+  <div class="col-md-1">
+  </div>
+
+  
+  <!-- Post Content Column -->
+  <div class="col-md-10">            
+
+    <!-- Title -->
+    <h2 class="mt-4">Gatepasses</h2>
+
+    <hr>
+
+
+    <!-- Post Content -->           
+
+    <ul class="list-group">
+
+        {% for gatepass in gatepasses %}
+        <li class="list-group-item list-group-item-secondary">
+                {{ gatepass.date_created }}:
+                <a href="{{ gatepass.get_absolute_url }}">{{ gatepass.description }} {{ gatepass.description }}</a>
+        </li>
+        {% endfor %}
+    
+    </ul>
+
+    
+    <hr>   
+
+
+  </div>
+
+
+  <!-- Column on the extreme right of the page for formatting purposes-->
+  <div class="col-md-1">  
+  </div>
+
+    
+</div>
+<!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+
+{% endblock %}

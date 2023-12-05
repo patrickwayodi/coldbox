@@ -1,0 +1,61 @@
+{% extends "gatepasses/base.html" %}
+
+
+<!-- Add some Bootstrap cards later on -->
+<!-- https://learndjango.com/tutorials/django-file-and-image-uploads-tutorial -->
+
+
+{% block title %}Coldbox{% endblock %}
+
+
+{% block content %}
+
+
+<!-- Page Content -->
+<div class="container">
+
+<div class="row">
+
+
+    <!-- Column on the extreme left of the page for formatting purposes-->
+    <div class="col-md-1">
+    </div>
+
+
+    <!-- Post Content Column -->
+    <div class="col-md-10">
+
+        <!-- Title -->
+        <h1 class="mt-4">Create Gatepass</h1>
+
+        <br />
+
+
+        <form method="post" enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button type="submit">Create Gatepass</button>
+
+        <form>
+
+        <hr>
+
+    </div>
+
+
+    <!-- Column on the extreme right of the page for formatting purposes-->
+    <div class="col-md-1">
+    </div>
+
+    
+</div>
+<!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+
+{% endblock %}

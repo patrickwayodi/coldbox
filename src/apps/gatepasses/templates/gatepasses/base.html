@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
 
+
+<html lang="en">
+
+
+{% include "gatepasses/head.html" %}
+
+
+<body>
+
+
+    {% include "gatepasses/navbar.html" %}
+
+    <main>
+
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+    {% include "gatepasses/footer.html" %}
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'gatepasses/js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+
+
+</html>
