@@ -25,7 +25,7 @@ sudo apt-get update
 sudo apt-get install python3
 
 
-## Create a virtual environment and activate it
+## Create a virtual environment and activate it.
 python3 -m venv ~/virtualenvs/coldbox
 
 source ~/virtualenvs/coldbox/bin/activate
@@ -55,7 +55,7 @@ python manage.py makemigrations assets
 python manage.py migrate
 
 
-## Create the admin account
+## Create the admin account.
 python manage.py createsuperuser
 
 
