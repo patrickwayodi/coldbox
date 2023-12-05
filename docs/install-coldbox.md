@@ -1,7 +1,18 @@
 Commands for Installing Coldbox
 ===============================
 
+
 Below are some commands for installing Coldbox.
+
+It's assumed that the user is running the Debian GNU/Linux operating system and that
+their username is "treetop". Make the necessary alterations if you're using a different
+operating system.
+
+
+## Prepare a directory to use for the installation.
+mkdir ~/apps/coldbox/exp
+
+cd ~/apps/coldbox/exp
 
 
 ## Clone the repository.
@@ -11,14 +22,12 @@ git clone https://github.com/patrickwayodi/coldbox.git
 ## If you don't have Python, install it.
 sudo apt-get update
 
-sudo apt-get install python
+sudo apt-get install python3
 
 
-## Create a virtual environment 
+## Create a virtual environment and activate it
 python3 -m venv ~/virtualenvs/coldbox
 
-
-## Activate the virtualenv
 source ~/virtualenvs/coldbox/bin/activate
 
 
@@ -37,9 +46,17 @@ pip install --upgrade --no-index --find-links=/home/treetop/pyrepo -r requiremen
 
 
 ## Propagate the changes made to the database models into your database schema.
-python manage.py makemigrations
+python manage.py makemigrations accounts
 
 python manage.py migrate
+
+python manage.py makemigrations assets
+
+python manage.py migrate
+
+
+## Create the admin account
+python manage.py createsuperuser
 
 
 ## Run the project.
