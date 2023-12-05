@@ -1,10 +1,21 @@
 Coldbox
 =======
 
+
 Coldbox is an asset management system that can allocate different permissions to the 
-respective users.
+respective users. 
+
+The user selects an Asset and then creates a request for a Gatepass. The request is then
+approved by an admin or a staff member.
 
 Coldbox is wriiten in Python using the Django framework.
+
+
+## TODO
+
+* Write code that will list the assets at the URL http://127.0.0.1:8000/assets
+* Finish creating the Gatepasses app
+* Configure Bootstrap properly so that the pages look better.
 
 
 ## Download and Installation
@@ -20,12 +31,17 @@ To install dependencies, run:
 * python -m pip install --upgrade pip (Upgrading pip)
 * pip install -r requirements/dev.txt
 
+Propagate the changes made to the database models into your database schema:
+* python manage.py makemigrations accounts
+* python manage.py migrate
+* python manage.py makemigrations assets
+* python manage.py migrate
+
+Create the admin account:
+* python manage.py createsuperuser
+
 
 ## Usage
-
-Propagate the changes made to the database models into your database schema:
-* python manage.py makemigrations
-* python manage.py migrate
 
 To run the project, execute:
 * python manage.py runserver
