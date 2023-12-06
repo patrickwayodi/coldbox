@@ -65,6 +65,10 @@ python manage.py makemigrations assets
 
 python manage.py migrate
 
+python manage.py makemigrations gatepasses
+
+python manage.py migrate
+
 
 ## Create the admin account.
 
