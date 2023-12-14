@@ -1,11 +1,9 @@
 """
 Django settings for the "core" project.
 
-For more information on this file, see
-https://docs.djangoproject.com/en/4.2/topics/settings/
-
-For the full list of settings and their values, see
-https://docs.djangoproject.com/en/4.2/ref/settings/
+https://docs.djangoproject.com/en/4.2/topics/settings
+https://docs.djangoproject.com/en/4.2/ref/settings
+https://django-debug-toolbar.readthedocs.io/en/latest/index.html
 """
 
 
@@ -16,7 +14,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
+# https://docs.djangoproject.com/en/4.2/howto/deployment/checklist
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "django-insecure-4*znbb5y8a(vhe#m&^%f390!(*oeizzbf062fk04+s7l=of61b"
@@ -43,7 +41,8 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
-    "django.contrib.staticfiles", 
+    "django.contrib.staticfiles",
+    "debug_toolbar",
     "widget_tweaks",
     "apps.accounts",
     "apps.assets",
@@ -51,6 +50,10 @@ INSTALLED_APPS = [
 ]
 
 
+# Warning: The order of MIDDLEWARE is important when using django-debug-toolbar. You 
+# should include its middleware as early as possible in the list. However, it must come 
+# after any other middleware that encodes the response’s content, such as GZipMiddleware.
+# https://django-debug-toolbar.readthedocs.io/en/latest/index.html
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -58,7 +61,8 @@ MIDDLEWARE = [
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
-    "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware", 
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 
@@ -127,7 +131,7 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
+# https://docs.djangoproject.com/en/4.2/howto/static-files
 
 STATIC_URL = "static/"
 
@@ -142,6 +146,7 @@ STATIC_ROOT = BASE_DIR / "staticroot/"
 
 # Media files
 # MEDIA_URL is the URL we can use in our templates for the files
+
 MEDIA_URL = '/media/'
 
 # MEDIA_ROOT is the absolute filesystem path to the directory for user-uploaded files
@@ -176,3 +181,14 @@ LOGGING = {
         'level': 'DEBUG',
     },
 }
+
+
+# The django-debug-toolbar is shown only if your IP address is listed in Django's 
+# INTERNAL_IPS setting.
+# https://docs.djangoproject.com/en/dev/ref/settings/#std-setting-INTERNAL_IPS
+# https://django-debug-toolbar.readthedocs.io/en/latest/index.html
+INTERNAL_IPS = [
+    "127.0.0.1",
+    '0.0.0.0',
+    '192.168.43.198',
+]
