@@ -1,13 +1,32 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>{% block title %}Coldbox{% endblock %}</title>
-</head>
+{% load static %}
+
+
+<html lang="en">
+
+
+{% include "accounts/head.html" %}
+
+
 <body>
-  <main>
-    {% block content %}
-    {% endblock %}
-  </main>
+
+
+    {% include "accounts/navbar.html" %}
+
+    <main>
+
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+    {% include "accounts/footer.html" %}
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'accounts/js/bootstrap.bundle.min.js' %}"></script>
+
+
 </body>
+
+
 </html>

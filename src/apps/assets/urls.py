@@ -10,8 +10,9 @@ from .views import CreateAssetView, AssetDetailView, HomeView
 
 urlpatterns = [
 
-    path("assets/", HomeView.as_view(), name='home'),
-    path("upload/", CreateAssetView.as_view(), name="upload_asset_collection"),
+    path("assets/", HomeView.as_view(), name='assets_home'),
+    # path("upload/", CreateAssetView.as_view(), name="create_asset"),
+    path("asset/new/", CreateAssetView.as_view(), name="create_asset"),
     path("asset/<int:pk>", AssetDetailView.as_view(), name='asset_detail'),
 
 ]

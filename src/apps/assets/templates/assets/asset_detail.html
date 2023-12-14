@@ -31,11 +31,25 @@
       <div>
           Date: {{ asset.date }}
       </div>
+      
+      </br>
 
       <div>
           {{ asset.description|linebreaks }}
       </div>
-            
+      
+      </br>
+
+      <div>
+          {{ asset.asset_file.name }}
+      </div>
+      
+      </br>
+
+      <div>
+          {{ asset.asset_file.url }}
+      </div>
+
   </div>
 
 

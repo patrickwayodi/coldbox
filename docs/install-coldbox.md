@@ -9,14 +9,14 @@ their username is "treetop". Make the necessary alterations if you're using a di
 operating system.
 
 
-## Prepare a directory to use for the installation.
+## Prepare a directory to use for the installation
 
 mkdir ~/apps/coldbox/exp
 
 cd ~/apps/coldbox/exp
 
 
-## Clone the repository.
+## Clone the repository
 
 git clone https://github.com/patrickwayodi/coldbox.git
 
@@ -28,54 +28,39 @@ sudo apt-get update
 sudo apt-get install python3
 
 
-## Create a virtual environment and activate it.
+## Create a PYthon virtual environment and install Coldbox's dependencies
 
 python3 -m venv ~/virtualenvs/coldbox
 
 source ~/virtualenvs/coldbox/bin/activate
 
-
-## Install Coldbox's dependencies.
-
-mkdir ~/pyrepo/
-
 cd coldbox/src
 
-pip download --dest=/home/treetop/pyrepo pip wheel
+pip install --upgrade pip wheel
 
-pip install --upgrade --no-index --find-links=/home/treetop/pyrepo pip wheel
-
-pip download --dest=/home/treetop/pyrepo -r requirements/dev.txt
-
-pip install --upgrade --no-index --find-links=/home/treetop/pyrepo -r requirements/dev.txt
+pip install --upgrade -r requirements.txt
 
 
-## Create a directory for storing the files that users will upload.
-
-mkdir /home/treetop/appmedia/coldbox/media/
-
-
-## Propagate the changes made to the database models into your database schema.
-
-python manage.py makemigrations accounts
-
-python manage.py migrate
-
-python manage.py makemigrations assets
-
-python manage.py migrate
-
-python manage.py makemigrations gatepasses
+## Propagate the changes made to the database models into your database schema
 
 python manage.py migrate
 
 
-## Create the admin account.
+## Create the admin account
 
 python manage.py createsuperuser
 
 
-## Run the project.
+## Run the tests
+
+python manage.py test accounts.tests
+
+python manage.py test assets.tests
+
+python manage.py test gatepasses.tests
+
+
+## Run the project
 
 python manage.py runserver
 

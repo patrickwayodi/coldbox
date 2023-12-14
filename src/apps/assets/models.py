@@ -4,11 +4,11 @@ from django.urls import reverse
 
 class Asset(models.Model):
 
+    description = models.TextField(max_length=300)
+
     asset_file = models.FileField(upload_to='assetfiles/')
 
-    description = models.CharField(max_length=5000)
-
-    date = models.DateField(blank=True, null=True)
+    date_created = models.DateField(blank=True, null=True)
 
     # def get_absolute_url(self):
         # return "/asset/%i/" % self.id
@@ -18,4 +18,4 @@ class Asset(models.Model):
     
     def __str__(self):
         
-        return self.file_name
+        return self.description

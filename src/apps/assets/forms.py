@@ -9,10 +9,10 @@ class AssetForm(forms.ModelForm):
     """
 
     asset_file = forms.FileField(label = "")
-
+    description = forms.CharField
 
     class Meta:
 
         model = Asset
 
-        fields = ["asset_file",]
+        fields = ["asset_file", "description",]

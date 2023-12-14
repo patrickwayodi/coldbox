@@ -1,3 +1,0 @@
-2023-11-30 15:58:55 /gatepasses/ DBConnectionError: Cannot access the database: No database connection (unknown)
-/usr/share/includes/libs/: Rdbms\LoadBalancer->reportConnectionError()
-/usr/share/includes/libs/: Rdbms\LoadBalancer->getServerConnection()

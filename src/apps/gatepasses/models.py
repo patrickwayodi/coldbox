@@ -15,4 +15,5 @@ class Gatepass(models.Model):
         return reverse('gatepass_detail', args=[str(self.id)])
 
     def __str__(self):
+        
         return self.description

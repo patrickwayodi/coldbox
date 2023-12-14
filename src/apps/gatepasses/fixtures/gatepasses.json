@@ -1,0 +1,26 @@
+[
+    {
+        "model": "gatepasses.gatepass",
+        "pk": 1,
+        "fields": {
+            "description": "Lenovo Laptop",
+            "date_created": "17th November 2019"            
+        }
+    },
+    {
+        "model": "gatepasses.gatepass",
+        "pk": 2,
+        "fields": {
+            "description": "Samsung Speaker",
+            "date_created": "16th November 2019"                                    
+        }
+    },     
+    {
+        "model": "gatepasses.gatepass",
+        "pk": 3,
+        "fields": {
+            "description": "Huawei Phone",
+            "date_created": "16th November 2019"                        
+        }
+    }
+]

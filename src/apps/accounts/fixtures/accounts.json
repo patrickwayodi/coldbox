@@ -1,0 +1,26 @@
+[
+    {
+        "model": "accounts.account",
+        "pk": 1,
+        "fields": {
+            "username": "janedoe",
+            "password": "nairobi456"
+        }
+    },
+    {
+        "model": "accounts.account",
+        "pk": 2,
+        "fields": {
+            "username": "johndoe",
+            "password": "mombasa456"
+        }
+    },     
+    {
+        "model": "accounts.account",
+        "pk": 3,
+        "fields": {
+            "username": "demo",
+            "password": "kisumu456"
+        }
+    }
+]

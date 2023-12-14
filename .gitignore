@@ -1,10 +1,38 @@
+*~
+archives/
+*.backup
+*.bak
+*.conf
+data/
+db.sqlite3
+*.delete
+docs/
+.editorconfig
+examples/
+input/
+*.log
+*.md
+media/
+output/
+*.pyc
+__pycache__/
+samples/
+settings.py
+snippets/
+*.sqlite3
+.venv
+venv/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
 
+
 # C extensions
 *.so
+
 
 # Distribution / packaging
 .Python
@@ -26,11 +54,13 @@ share/python-wheels/
 *.egg
 MANIFEST
 
+
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
+
 
 # Installer logs
 pip-log.txt

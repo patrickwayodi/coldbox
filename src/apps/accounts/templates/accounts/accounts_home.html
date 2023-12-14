@@ -1,0 +1,61 @@
+{% extends "accounts/base.html" %}
+
+{% block title %}Accounts{% endblock %}
+
+
+{% block content %}
+
+
+<h1>Coldbox</h1>
+
+
+<div>
+    <p>
+        Coldbox is an asset management system that can allocate different permissions to 
+        the respective users. 
+    </p>
+    <p>
+        The user selects an Asset and then creates a request for a Gatepass. The request 
+        is then approved by an admin or a staff member.
+    </p>
+    <p>
+        Coldbox is wriiten in Python using Django and Bootstrap.
+    </p>
+</div>
+
+
+</br></br>
+
+
+<div>
+    {% if user.is_authenticated %}
+      Hi {{ user.username }}!
+      <p><a href="{% url 'logout' %}">Log Out</a></p>
+    {% else %}
+      <p>You are not logged in</p>
+      <a href="{% url 'login' %}">Log In</a> |
+      <a href="{% url 'signup' %}">Sign Up</a>
+    {% endif %}
+</div>
+
+
+</br></br>
+
+
+<div>
+    <a href="http://127.0.0.1:8000/gatepass/upload/">Create a Gatepass</a>
+    </br></br>
+    <a href="http://127.0.0.1:8000/gatepasses/">View the Gatepasses</a>
+    </br></br>
+    <a href="http://127.0.0.1:8000/upload/">Create an Asset</a>
+    </br></br>
+    <a href="http://127.0.0.1:8000/assets/">View the Assets</a>
+    </br></br>
+    <a href="http://127.0.0.1:8000/accounts/">View the Registered Accounts</a>
+</div>
+
+
+</br></br>
+
+
+{% endblock %}

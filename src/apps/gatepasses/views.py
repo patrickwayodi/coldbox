@@ -1,10 +1,7 @@
 """
 https://learndjango.com/tutorials/django-file-and-image-uploads-tutorial
-TODO: Implement logging to a file (gatepasses.log).
 """
 
-
-import logging
 
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render
@@ -17,21 +14,15 @@ from .forms import GatepassForm
 from .models import Gatepass
 
 
-# Get an instance of a logger
-logger = logging.getLogger(__name__)
-
-
 class HomeView(ListView):
-    
+
     model = Gatepass
     
-    template_name = "gatepasses/home.html"
+    template_name = "gatepasses/gatepasses_home.html"
 
     def get_queryset(self, **kwargs):
-
-        # queryset = Gatepass.objects.all()[:5]
-        
-        queryset = Gatepass.objects.order_by("-id")[:5]
+       
+        queryset = Gatepass.objects.order_by("-id")[:50]
 
         return queryset
 
@@ -39,7 +30,28 @@ class HomeView(ListView):
 
         context = super(HomeView, self).get_context_data(**kwargs)
 
-        context['gatepasses'] = Gatepass.objects.order_by("-id")[:5]
+        context['gatepasses'] = Gatepass.objects.order_by("-id")[:50]
+
+        return context
+
+
+class ListGatepassesView(ListView):
+    
+    model = Gatepass
+
+    template_name = "gatepasses/gatepasses_list.html"
+
+    def get_queryset(self, **kwargs):
+       
+        queryset = Gatepass.objects.order_by("-id")[:50]
+
+        return queryset
+
+    def get_context_data(self, **kwargs):
+
+        context = super(HomeView, self).get_context_data(**kwargs)
+
+        context['gatepasses'] = Gatepass.objects.order_by("-id")[:50]
 
         return context
 

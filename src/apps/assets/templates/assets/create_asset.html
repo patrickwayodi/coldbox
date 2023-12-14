@@ -1,4 +1,5 @@
 {% extends "assets/base.html" %}
+{% load widget_tweaks %}
 
 
 <!-- Add some Bootstrap cards later on -->
@@ -33,9 +34,13 @@
 
         <form method="post" enctype="multipart/form-data">
 
-            {% csrf_token %}
+            {% csrf_token %}    
+            
+            <!-- {{ form.as_p }} -->
+            <!-- First install and configure django-widget-tweaks -->
+            {% render_field form.description class="form-control" %}    
 
-            {{ form.as_p }}
+            {% render_field form.asset_file class="form-control" %}    
 
             <button type="submit">Create Asset</button>
 

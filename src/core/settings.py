@@ -1,10 +1,13 @@
 """
+Django settings for the "core" project.
+
 For more information on this file, see
 https://docs.djangoproject.com/en/4.2/topics/settings/
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
+
 
 from pathlib import Path
 
@@ -16,23 +19,32 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-4*znbb6y5a(vhe#m&^%f670!(*oeizzb70b2fk04+s7l=o310b"
+SECRET_KEY = "django-insecure-4*znbb4y9a(vhe#m&^%f370!(*oeizzbf042fk04+s7l=o361b"
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+# Allowed hosts
+ALLOWED_HOSTS = [
+    '0.0.0.0',
+    '127.0.0.1',
+    'localhost',
+    '192.168.43.198',
+    '.example.com',
+]
 
 
 # Application definition
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
-    "django.contrib.staticfiles",
+    "django.contrib.staticfiles", 
+    "widget_tweaks",
     "apps.accounts",
     "apps.assets",
     "apps.gatepasses",
@@ -49,7 +61,9 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+
 ROOT_URLCONF = "core.urls"
+
 
 TEMPLATES = [
     {
@@ -67,12 +81,12 @@ TEMPLATES = [
     },
 ]
 
+
 WSGI_APPLICATION = "core.wsgi.application"
 
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
@@ -117,8 +131,13 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
+STATICFILES_DIRS = (
+    BASE_DIR / "apps/accounts/static/",
+    BASE_DIR / "apps/assets/static/",
+    BASE_DIR / "apps/gatepasses/static/",
+)
+
+STATIC_ROOT = BASE_DIR / "staticroot/"
 
 
 # Media files
@@ -126,13 +145,11 @@ STATIC_URL = "static/"
 MEDIA_URL = '/media/'
 
 # MEDIA_ROOT is the absolute filesystem path to the directory for user-uploaded files
-# Remember to make an images folder within the "media" directory
-# $ mkdir media/images
-# MEDIA_ROOT = BASE_DIR / "media"
-# MEDIA_ROOT = '/home/treetop/djangomedia/coldbox/media/'
-MEDIA_ROOT = '/home/treetop/appmedia/coldbox/media/'
+MEDIA_ROOT = BASE_DIR / "media/"
 
 
+# Default primary key field type
+# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
@@ -142,6 +159,20 @@ SITE_ID = 1
 AUTH_USER_MODEL = 'accounts.Account'
 
 
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'accounts_home'
+LOGOUT_REDIRECT_URL = 'accounts_home'
 
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'DEBUG',
+    },
+}

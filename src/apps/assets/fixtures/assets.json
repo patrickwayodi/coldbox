@@ -1,0 +1,29 @@
+[
+    {
+        "model": "assets.asset",
+        "pk": 1,
+        "fields": {
+            "asset_file": "Lenovo Laptop",
+            "description": "Nairobi",
+            "date_created": "17th November 2019"            
+        }
+    },
+    {
+        "model": "assets.asset",
+        "pk": 2,
+        "fields": {
+            "asset_file": "Samsung Speaker",
+            "description": "Nairobi",
+            "date_created": "16th November 2019"                                    
+        }
+    },     
+    {
+        "model": "assets.asset",
+        "pk": 3,
+        "fields": {
+            "asset_file": "Huawei Phone",
+            "description": "Nairobi",
+            "date_created": "16th November 2019"                        
+        }
+    }
+]

@@ -1,0 +1,156 @@
+{% extends "gatepasses/base.html" %}
+
+
+<!-- Coldbox's Gatepasses index -->
+<!-- Add some Bootstrap cards later on -->
+
+
+{% block title %}Coldbox{% endblock %}
+
+
+{% block content %}
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>Cheatsheet · Bootstrap v5.2</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/cheatsheet/">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="cheatsheet.css" rel="stylesheet">
+</head>
+
+
+<header class="bd-header bg-dark py-3 d-flex align-items-stretch border-bottom border-dark">
+    <div class="container-fluid d-flex align-items-center">
+        <h1 class="d-flex align-items-center fs-4 text-white mb-0">Coldbox</h1>
+    </div>
+</header>
+
+
+<!-- Page Content -->
+<div class="container">
+
+<div class="row">
+
+
+  <!-- Column on the extreme left of the page for formatting purposes-->
+  <div class="col-md-1">
+  </div>
+
+  
+  <!-- Post Content Column -->
+  <div class="col-md-10">            
+
+    <!-- Title -->
+    <h2 class="mt-4">Gatepasses</h2>
+
+    <hr>
+
+
+    <!-- Post Content -->           
+
+    <ul class="list-group">
+
+        {% for gatepass in gatepasses %}
+        <li class="list-group-item list-group-item-secondary">
+                {{ gatepass.date_created }}:
+                <a href="{{ gatepass.get_absolute_url }}">{{ gatepass.description }} {{ gatepass.description }}</a>
+        </li>
+        {% endfor %}
+    
+    </ul>
+
+
+
+
+<article class="my-3" id="overview">
+    
+    <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+        
+        <h3>User Login</h3>
+        
+    </div>
+    
+    </br>
+    
+    <div class="bd-example-snippet bd-code-snippet">
+        
+        <div class="bd-example">
+            
+            <form>
+                
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                
+                </br>
+                
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                
+                </br>
+                
+                <div class="mb-3">
+                    <label for="exampleSelect" class="form-label">Select menu</label>
+                    <select class="form-select" id="exampleSelect">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                
+                </br>
+                
+                <div class="mb-3">
+                    <label class="form-label" for="customFile">Upload</label>
+                    <input type="file" class="form-control" id="customFile">
+                </div>
+                
+                </br>
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+            </form>
+            
+        </div>
+        
+    </div>
+
+</article>
+
+
+<script src="bootstrap.bundle.min.js"></script>
+
+<script src="cheatsheet.js"></script>
+
+
+{% endblock %}
+
+
+
+    
+    <hr>   
+
+
+  </div>
+
+
+  <!-- Column on the extreme right of the page for formatting purposes-->
+  <div class="col-md-1">  
+  </div>
+
+    
+</div>
+<!-- /.row -->
+
+</div>
+<!-- /.container -->

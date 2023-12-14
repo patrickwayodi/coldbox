@@ -1,5 +1,0 @@
-Django==4.2.8
-django-extensions
-gunicorn
-PyPDF2
-reportlab

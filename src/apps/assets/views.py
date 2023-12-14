@@ -3,8 +3,6 @@ https://learndjango.com/tutorials/django-file-and-image-uploads-tutorial
 """
 
 
-import logging
-
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse, reverse_lazy
@@ -16,21 +14,15 @@ from .forms import AssetForm
 from .models import Asset, Asset
 
 
-# Get an instance of a logger
-logger = logging.getLogger(__name__)
-
-
 class HomeView(ListView):
     
     model = Asset
-    
-    template_name = "assets/home.html"
+
+    template_name = "assets/assets_home.html"
 
     def get_queryset(self, **kwargs):
-
-        # queryset = Asset.objects.all()[:5]
         
-        queryset = Asset.objects.order_by("-id")[:5]
+        queryset = Asset.objects.order_by("-id")[:50]
 
         return queryset
 
@@ -38,10 +30,31 @@ class HomeView(ListView):
 
         context = super(HomeView, self).get_context_data(**kwargs)
 
-        context['assets'] = Asset.objects.order_by("-id")[:5]
+        context['assets'] = Asset.objects.order_by("-id")[:50]
 
         return context
 
+
+class ListAssetsView(ListView):
+    
+    model = Asset
+
+    template_name = "assets/assets_list.html"
+
+    def get_queryset(self, **kwargs):
+       
+        queryset = Asset.objects.order_by("-id")[:50]
+
+        return queryset
+
+    def get_context_data(self, **kwargs):
+
+        context = super(HomeView, self).get_context_data(**kwargs)
+
+        context['assets'] = Asset.objects.order_by("-id")[:50]
+
+        return context
+        
 
 class CreateAssetView(CreateView):
 
@@ -49,9 +62,9 @@ class CreateAssetView(CreateView):
 
     form_class = AssetForm
 
-    template_name = "assets/upload.html"
+    template_name = "assets/create_asset.html"
 
-    success_url = reverse_lazy("home")
+    success_url = reverse_lazy("assets_home")
 
 
 class AssetDetailView(DetailView):

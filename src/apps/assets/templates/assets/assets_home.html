@@ -39,7 +39,7 @@
         {% for asset in assets %}
         <li class="list-group-item list-group-item-secondary">
                 {{ asset.date }}:
-                <a href="{{ asset.get_absolute_url }}">{{ asset.date }} {{ asset.date }}</a>
+                <a href="{{ asset.get_absolute_url }}">{{ asset.description }}</a>
         </li>
         {% endfor %}
     
