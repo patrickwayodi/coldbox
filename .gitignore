@@ -17,6 +17,7 @@ output/
 *.pyc
 __pycache__/
 samples/
+src/core/settings.py
 settings.py
 snippets/
 *.sqlite3
