@@ -3,7 +3,7 @@ Coldbox
 
 
 Coldbox is an asset management system that allocates different permissions to the 
-respective users. 
+respective users.
 
 The user selects an Asset and then creates a request for a Gatepass. The request is then
 approved by an admin or a staff member.
