@@ -34,14 +34,16 @@ python3 -m venv ~/virtualenvs/coldbox
 
 source ~/virtualenvs/coldbox/bin/activate
 
-cd coldbox/src
-
 pip install --upgrade pip wheel
+
+cd coldbox/src
 
 pip install --upgrade -r requirements.txt
 
 
 ## Propagate the changes made to the database models into your database schema
+
+python manage.py makemigrations
 
 python manage.py migrate
 
@@ -51,13 +53,16 @@ python manage.py migrate
 python manage.py createsuperuser
 
 
+## Deploy the Django Fixtures
+
+
 ## Run the tests
 
-python manage.py test accounts.tests
+python manage.py test apps.accounts.tests
 
-python manage.py test assets.tests
+python manage.py test apps.assets.tests
 
-python manage.py test gatepasses.tests
+python manage.py test apps.gatepasses.tests
 
 
 ## Run the project

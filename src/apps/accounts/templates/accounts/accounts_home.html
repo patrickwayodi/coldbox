@@ -43,15 +43,15 @@
 
 
 <div>
-    <a href="http://127.0.0.1:8000/gatepass/upload/">Create a Gatepass</a>
+    <a href="{% url 'create_gatepass' %}">Create a Gatepass</a>
     </br></br>
-    <a href="http://127.0.0.1:8000/gatepasses/">View the Gatepasses</a>
+    <a href="{% url 'gatepasses_home' %}">View the Gatepasses</a>
     </br></br>
-    <a href="http://127.0.0.1:8000/upload/">Create an Asset</a>
+    <a href="{% url 'create_asset' %}">Create an Asset</a>
     </br></br>
-    <a href="http://127.0.0.1:8000/assets/">View the Assets</a>
+    <a href="{% url 'assets_home' %}">View the Assets</a>
     </br></br>
-    <a href="http://127.0.0.1:8000/accounts/">View the Registered Accounts</a>
+    <a href="{% url 'accounts_home' %}">View the Registered Accounts</a>
 </div>
 
 
