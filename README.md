@@ -16,21 +16,15 @@ The project is still in a pre-alpha state so use it with care.
 
 ## TODO
 
-* Change the hardcoded URLs that appear on the main page (use template tags instead).
-* Configure django-debug-toolbar
-* Configure django-widget-tweaks
-* Write code that will list the assets at the URL http://127.0.0.1:8000/assets
-* Configure Bootstrap properly so that the pages look better.
-* Extend (or override) the Django ModelForm so that the forms look better.
-*     https://getbootstrap.com/docs/5.2/examples/cheatsheet
-*     https://www.pypi.org/project/django-widget-tweaks
-*     https://www.prettyprinted.com/tutorials/django-widget-tweaks
+* Configure django-debug-toolbar.
+* Configure django-widget-tweaks.
+* Configure Bootstrap so that the pages look better.
 * Finish writing the documentation for installing and configuring Apache.
 * Simplify the project so that each source code file has less than 100 lines of code.
-* Create an About page for each of the Django apps.
-* Use HTMX instead of JavaScript for most dynamic scripting.
 * Files to be modified should first be copied to a file with a ".backup" extension.
 * Files to be deleted should instead be renamed with a ".delete" extension.
+* Create a search app for searching for gatepasses, assets, and users.
+* Use HTMX instead of JavaScript for scripting.
 
 
 ## Download and Installation
