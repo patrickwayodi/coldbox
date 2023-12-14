@@ -4,10 +4,6 @@ Commands for Installing Coldbox
 
 Below are some commands for installing Coldbox.
 
-It's assumed that the user is running the Debian GNU/Linux operating system and that
-their username is "treetop". Make the necessary alterations if you're using a different
-operating system.
-
 
 ## Prepare a directory to use for the installation
 
@@ -76,3 +72,8 @@ operating system.
 * python manage.py runserver
 
 * Open http://127.0.0.1:8000 on your browser.
+
+
+## References
+
+* django/docs/howto/initial-data.html#provide-data-with-fixtures
