@@ -6,7 +6,6 @@ archives/
 data/
 db.sqlite3
 *.delete
-docs/
 .editorconfig
 examples/
 input/
