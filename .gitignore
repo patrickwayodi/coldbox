@@ -10,7 +10,6 @@ db.sqlite3
 examples/
 input/
 *.log
-*.md
 media/
 output/
 *.pyc
