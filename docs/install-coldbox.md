@@ -7,9 +7,9 @@ Below are some commands for installing Coldbox.
 
 ## Prepare a directory to use for the installation
 
-* mkdir ~/apps/coldbox/exp
+* mkdir ~/workspace
 
-* cd ~/apps/coldbox/exp
+* cd ~/workspace
 
 
 ## Clone the repository
