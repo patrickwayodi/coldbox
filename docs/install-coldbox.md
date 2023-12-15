@@ -19,7 +19,7 @@ Below are some commands for installing Coldbox.
 * cd coldbox
 
 
-## If you don't have Python, install it.
+## Install Python
 
 * sudo apt-get update
 
@@ -78,4 +78,4 @@ Below are some commands for installing Coldbox.
 
 ## References
 
-* django/docs/howto/initial-data.html#provide-data-with-fixtures
+* https://docs.djangoproject.com/en/4.2/howto/initial-data/#provide-data-with-fixtures
