@@ -16,6 +16,8 @@ Below are some commands for installing Coldbox.
 
 * git clone https://github.com/patrickwayodi/coldbox.git
 
+* cd coldbox
+
 
 ## If you don't have Python, install it.
 
@@ -32,12 +34,12 @@ Below are some commands for installing Coldbox.
 
 * pip install --upgrade pip wheel
 
-* cd coldbox/src
-
-* pip install --upgrade -r requirements.txt
+* pip install --upgrade -r src/requirements.txt
 
 
 ## Propagate the changes made to the database models into your database schema
+
+* cd src
 
 * python manage.py makemigrations
 

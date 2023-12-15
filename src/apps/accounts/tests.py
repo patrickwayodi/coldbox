@@ -9,10 +9,8 @@ manage.py test accounts.tests
 from django.test import Client, TestCase
 
 
-class AccountTestCase(TestCase):
+class AccountsTestCase(TestCase):
     
-    fixtures = ['accounts.json',]
-
     def setUp(self):
         
         # Every test needs a client.
@@ -21,7 +19,7 @@ class AccountTestCase(TestCase):
     def test_account_detail(self):
         
         # Issue a GET request.
-        response = self.client.get('/account/3/')
+        response = self.client.get('/signup/')
 
         # Check that the response is 200 OK.
         self.assertEqual(response.status_code, 200)

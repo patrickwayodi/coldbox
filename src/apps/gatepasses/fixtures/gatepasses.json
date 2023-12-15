@@ -3,24 +3,24 @@
         "model": "gatepasses.gatepass",
         "pk": 1,
         "fields": {
-            "description": "Lenovo Laptop",
-            "date_created": "17th November 2019"            
+            "description": "This gatepass authorizes you to collect the Lenovo Laptop.",
+            "date_created": "2019-11-27"            
         }
     },
     {
         "model": "gatepasses.gatepass",
         "pk": 2,
         "fields": {
-            "description": "Samsung Speaker",
-            "date_created": "16th November 2019"                                    
+            "description": "This gatepass authorizes you to collect the Samsung Speaker.",
+            "date_created": "2019-11-23"                                    
         }
     },     
     {
         "model": "gatepasses.gatepass",
         "pk": 3,
         "fields": {
-            "description": "Huawei Phone",
-            "date_created": "16th November 2019"                        
+            "description": "This gatepass authorizes you to collect the Huawei Phone.",
+            "date_created": "2019-11-29"                        
         }
     }
 ]

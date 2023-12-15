@@ -14,7 +14,7 @@ urlpatterns = [
     path("gatepasses/", HomeView.as_view(), name='gatepasses_home'),
     # path("gatepass/upload/", CreateGatepassView.as_view(), name="create_gatepass"),
     path("gatepass/new/", CreateGatepassView.as_view(), name="create_gatepass"),
-    path("gatepass/<int:pk>", GatepassDetailView.as_view(), name='gatepass_detail'),
+    path("gatepass/<int:pk>/", GatepassDetailView.as_view(), name='gatepass_detail'),
 
 ]
 

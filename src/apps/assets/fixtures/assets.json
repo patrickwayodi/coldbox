@@ -4,8 +4,8 @@
         "pk": 1,
         "fields": {
             "asset_file": "Lenovo Laptop",
-            "description": "Nairobi",
-            "date_created": "17th November 2019"            
+            "description": "This is a laptop computer.",
+            "date_created": "2022-11-23"            
         }
     },
     {
@@ -13,8 +13,8 @@
         "pk": 2,
         "fields": {
             "asset_file": "Samsung Speaker",
-            "description": "Nairobi",
-            "date_created": "16th November 2019"                                    
+            "description": "This is a bluetooth speaker.",
+            "date_created": "2022-11-26"                                    
         }
     },     
     {
@@ -22,8 +22,8 @@
         "pk": 3,
         "fields": {
             "asset_file": "Huawei Phone",
-            "description": "Nairobi",
-            "date_created": "16th November 2019"                        
+            "description": "This is a phone.",
+            "date_created": "2022-11-29"                        
         }
     }
 ]

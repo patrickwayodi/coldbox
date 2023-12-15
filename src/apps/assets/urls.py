@@ -13,7 +13,7 @@ urlpatterns = [
     path("assets/", HomeView.as_view(), name='assets_home'),
     # path("upload/", CreateAssetView.as_view(), name="create_asset"),
     path("asset/new/", CreateAssetView.as_view(), name="create_asset"),
-    path("asset/<int:pk>", AssetDetailView.as_view(), name='asset_detail'),
+    path("asset/<int:pk>/", AssetDetailView.as_view(), name='asset_detail'),
 
 ]
 
