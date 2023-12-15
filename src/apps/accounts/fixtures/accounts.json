@@ -4,7 +4,7 @@
         "pk": 1,
         "fields": {
             "username": "janedoe",
-            "password": "nairobi456"
+            "password": "pbkdf2_sha256$600000$hKDuYUKvEoPLtGpRhXQy3T$AcHM2yen3TOG9qUoP8xJ/9oflw8iRa+QewO8P8OYxrM="
         }
     },
     {
@@ -12,7 +12,7 @@
         "pk": 2,
         "fields": {
             "username": "johndoe",
-            "password": "mombasa456"
+            "password": "pbkdf2_sha256$600000$hKDuYUKvEoPLtGpRhXQy3T$AcHM2yen3TOG9qUoP8xJ/9oflw8iRa+QewO8P8OYxrM="
         }
     },     
     {
@@ -20,7 +20,7 @@
         "pk": 3,
         "fields": {
             "username": "demo",
-            "password": "kisumu456"
+            "password": "pbkdf2_sha256$600000$hKDuYUKvEoPLtGpRhXQy3T$AcHM2yen3TOG9qUoP8xJ/9oflw8iRa+QewO8P8OYxrM="
         }
     }
 ]
