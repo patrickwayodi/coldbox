@@ -30,6 +30,13 @@ TODO
 * Modify the file "templates/footer.html".
 
 
+## Increase Security
+
+* Remove all keys and passwords from the file "settings.py".
+* Configure rate-limitting (e.g. by using django-rate-limitter).
+* Limit how much resources (RAM, CPU, storage, etc) the running Django project can use.
+
+
 ## Write More Tests
 
 * logging in

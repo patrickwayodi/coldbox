@@ -11,7 +11,8 @@ approved by an admin or a staff member.
 Coldbox is wriiten in Python using [Django](https://www.djangoproject.com) and
 [Bootstrap](https://www.getbootstrap.com).
 
-The project is still in a pre-alpha state so use it with care.
+The project is still in a pre-alpha state so use it with care. A list of things that are
+yet to be implemented can be found at docs/todo.md
 
 
 ## Download and Installation
@@ -49,7 +50,7 @@ To run the project, execute:
 
 ## To Do
 
-* For a list of things to be implemented, see docs/todo.md
+* For a list of things that are yet to be implemented, see docs/todo.md
 
 
 ## To get more help
