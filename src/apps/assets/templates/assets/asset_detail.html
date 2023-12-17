@@ -39,9 +39,9 @@ https://www.prettyprinted.com/tutorials/django-widget-tweaks
   <div class="col-md-10">
 
       <div>
-          Date: {{ asset.date }}
+          Date: {{ asset.date_created }}
       </div>
-      
+    
       </br>
 
       <div>
@@ -60,6 +60,12 @@ https://www.prettyprinted.com/tutorials/django-widget-tweaks
           {{ asset.asset_file.url }}
       </div>
 
+      </br>
+
+      <div>
+          <img src="{{ asset.asset_file.url }}" height="150">
+      </div>
+      
   </div>
 
 

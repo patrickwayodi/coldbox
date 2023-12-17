@@ -5,13 +5,6 @@ How to Install Coldbox
 Below are some commands for installing Coldbox.
 
 
-## References
-
-* https://docs.djangoproject.com/en/4.2/howto/deployment
-* https://docs.djangoproject.com/en/4.2/howto/initial-data/#provide-data-with-fixtures
-* https://docs.djangoproject.com/en/4.2/howto/deployment/checklist
-
-
 ## Prepare a working directory
 
 * Prepare a directory to use for the installation.
@@ -80,3 +73,10 @@ Below are some commands for installing Coldbox.
     - python manage.py runserver
 * Open http://127.0.0.1:8000 on your browser.
 * The default users are "janedoe", "johndoe", and "demo". Their password is "django123".
+
+
+## References
+
+* https://docs.djangoproject.com/en/4.2/howto/deployment
+* https://docs.djangoproject.com/en/4.2/howto/initial-data/#provide-data-with-fixtures
+* https://docs.djangoproject.com/en/4.2/howto/deployment/checklist
