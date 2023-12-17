@@ -17,7 +17,8 @@ class AssetForm(forms.ModelForm):
     https://stackoverflow.com/questions/9878475/django-modelform-override-widget
     """
 
-    asset_file = forms.FileField(label = "")
+    # asset_file = forms.FileField(label = "")
+    asset_file = forms.FileField
     description = forms.CharField
 
     class Meta:

@@ -42,9 +42,10 @@ https://www.prettyprinted.com/tutorials/django-widget-tweaks
 
         <form method="post" enctype="multipart/form-data">
 
-            {% csrf_token %}
-
-            {{ form.as_p }}
+            {% csrf_token %}         
+            
+            <!-- {{ form.as_p }} -->
+            {% render_field form.description class="form-control" %}    
 
             <button type="submit">Create Gatepass</button>
 

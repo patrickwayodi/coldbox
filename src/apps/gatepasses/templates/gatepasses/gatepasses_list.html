@@ -59,13 +59,13 @@
         {% for gatepass in gatepasses %}
         <li class="list-group-item list-group-item-secondary">
                 {{ gatepass.date_created }}:
-                <a href="{{ gatepass.get_absolute_url }}">{{ gatepass.description }} {{ gatepass.description }}</a>
+                <a href="{{ gatepass.get_absolute_url }}">
+                    {{ gatepass.description }}
+                </a>
         </li>
         {% endfor %}
     
     </ul>
-
-
 
 
 <article class="my-3" id="overview">

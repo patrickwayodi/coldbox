@@ -1,4 +1,4 @@
-deploy-Coldbox with-apache
+Deploy Coldbox with Apache
 ==========================
 
 
@@ -7,6 +7,13 @@ Below are some commands for installing and configuring Apache for use with Coldb
 It's assumed that the user is running the Debian GNU/Linux operating system and that
 their username is "treetop". Make the necessary alterations if you're using a different
 operating system.
+
+
+## References
+
+* https://docs.djangoproject.com/en/4.2/howto/deployment
+* https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/modwsgi
+* https://docs.djangoproject.com/en/4.2/howto/deployment/checklist
 
 
 ## Install Apache and other related software packages.

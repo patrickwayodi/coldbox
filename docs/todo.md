@@ -2,35 +2,45 @@ TODO
 ====
 
 
+## Test the Project Locally
+
+* Run the project and access it using your browser.
+    - cd ~/apps/coldbox/dev/coldbox/src
+    - source ~/virtualenvs/coldbox/bin/activate
+    - python manage.py runserver
+* Open http://127.0.0.1:8000 on your browser.
+* The default users are "janedoe", "johndoe", and "demo". Their password is "django123".
+
+
 ## Update the GitHub Repository
 
 * Push the latest changes to GitHub.
-      cd ~/apps/coldbox/dev/coldbox
-      git add .
-      git commit -m "new updates"
-      git push --set-upstream origin main
+    - cd ~/apps/coldbox/dev/coldbox
+    - git add .
+    - git commit -m "new updates"
+    - git push --set-upstream origin main
 
 
 ## Configure Bootstrap
 
 * Configure Bootstrap so that the pages look better.
 * Check if it's safe to delete this snippet in the CSS file "static/{app-name}.css":
-      :root { --bs-body-bg: var(--bs-gray-100); }
+    - :root { --bs-body-bg: var(--bs-gray-100); }
 * Include the missing CSS and JS files in all the "head.html" files.
 
 
 ## Listing of Users
 
 * Enable the accounts app to list users.
-      http://www.example.com/users
-      http://www.example.com/user/3456789012
+    - http://www.example.com/users
+    - http://www.example.com/user/3456789012
 
 
 ## Searching of Assets
 
 * Create a search app for searching for assets.
-      http://www.example.com/search
-      http://www.example.com/search?query=samsung+phone
+    - http://www.example.com/search
+    - http://www.example.com/search?query=samsung+phone
 
 
 ## Modify the Navbars
