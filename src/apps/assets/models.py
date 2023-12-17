@@ -8,7 +8,8 @@ class Asset(models.Model):
 
     asset_file = models.FileField(upload_to='assetfiles/')
 
-    date_created = models.DateField(blank=True, null=True)
+    # date_created = models.DateField(blank=True, null=True)
+    date_created = models.DateTimeField(auto_now_add=True, blank=True, null=True)
 
     # def get_absolute_url(self):
         # return "/asset/%i/" % self.id
