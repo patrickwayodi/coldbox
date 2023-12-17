@@ -4,20 +4,33 @@ TODO
 
 ## Update the GitHub Repository
 
-* cd ~/apps/coldbox/dev/coldbox
-* git add .
-* git commit -m "new updates"
-* git push --set-upstream origin main
+* Push the latest changes to GitHub.
+      cd ~/apps/coldbox/dev/coldbox
+      git add .
+      git commit -m "new updates"
+      git push --set-upstream origin main
 
 
 ## Configure Bootstrap
 
 * Configure Bootstrap so that the pages look better.
 * Check if it's safe to delete this snippet in the CSS file "static/{app-name}.css":
-      :root {
-        --bs-body-bg: var(--bs-gray-100);
-      }
-* Modify all the "head.html" files.
+      :root { --bs-body-bg: var(--bs-gray-100); }
+* Include the missing CSS and JS files in all the "head.html" files.
+
+
+## Listing of Users
+
+* Enable the accounts app to list users.
+      http://www.example.com/users
+      http://www.example.com/user/3456789012
+
+
+## Searching of Assets
+
+* Create a search app for searching for assets.
+      http://www.example.com/search
+      http://www.example.com/search?query=samsung+phone
 
 
 ## Modify the Navbars
@@ -27,7 +40,7 @@ TODO
 
 ## Modify the Footers
 
-* Modify the file "templates/footer.html".
+* Remove the irrelevant links from the file "templates/footer.html".
 
 
 ## Increase Security
@@ -61,7 +74,6 @@ TODO
 * Simplify the project so that each source code file has less than 100 lines of code.
 * Files to be modified should first be copied to a file with a ".backup" extension.
 * Files to be deleted should instead be renamed with a ".delete" extension.
-* Create a search app for searching for gatepasses, assets, and users.
 
 
 ## Creating a Gatepass
@@ -72,4 +84,4 @@ TODO
 
 ## Use HTMX
 
-* Use HTMX instead of JavaScript for scripting.
+* Use HTMX instead of JavaScript for asynchronous scripting.
