@@ -14,19 +14,6 @@ Coldbox is wriiten in Python using [Django](https://www.djangoproject.com) and
 The project is still in a pre-alpha state so use it with care.
 
 
-## TODO
-
-* Configure django-debug-toolbar.
-* Configure django-widget-tweaks.
-* Configure Bootstrap so that the pages look better.
-* Finish writing the documentation for installing and configuring Apache.
-* Simplify the project so that each source code file has less than 100 lines of code.
-* Files to be modified should first be copied to a file with a ".backup" extension.
-* Files to be deleted should instead be renamed with a ".delete" extension.
-* Create a search app for searching for gatepasses, assets, and users.
-* Use HTMX instead of JavaScript for scripting.
-
-
 ## Download and Installation
 
 To begin using this software:
@@ -34,15 +21,17 @@ To begin using this software:
 
 Clone the repo: 
 * git clone https://github.com/patrickwayodi/coldbox.git
+* cd coldbox
 
-Create a PYthon virtual environment and install Coldbox's dependencies
+Create a PYthon virtual environment and install Coldbox's dependencies:
 * python3 -m venv ~/virtualenvs/coldbox
 * source ~/virtualenvs/coldbox/bin/activate
-* cd coldbox/src
 * pip install --upgrade pip wheel
-* pip install --upgrade -r requirements.txt
+* pip install --upgrade -r src/requirements.txt
 
 Propagate the changes made to the database models into your database schema:
+* cd src
+* python manage.py makemigrations
 * python manage.py migrate
 
 Create the admin account:
@@ -58,7 +47,13 @@ To run the project, execute:
 * Open http://127.0.0.1:8000/ on your browser
 
 
-## To get more help:
+## To Do
+
+* For a list of things to be implemented, see docs/todo.md
+
+
+## To get more help
+
 * View the documentation in the "docs" directory.
 * Contact me on Twitter: **[@patrickwayodi](https://www.twitter.com/patrickwayodi)**
 

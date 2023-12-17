@@ -5,6 +5,11 @@ Using Git
 Below are some commands for using Git.
 
 
+## References
+
+* https://docs.github.com/en/get-started/using-git/about-git
+
+
 ## download the repo on GitHub to a local machine
 
 * git clone https://github.com/patrickwayodi/coldbox.git
@@ -41,8 +46,3 @@ Below are some commands for using Git.
 ## push changes to github
 
 * git push --set-upstream origin main
-
-
-## References
-
-* https://docs.github.com/en/get-started/using-git/about-git

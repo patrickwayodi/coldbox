@@ -5,44 +5,41 @@ Commands for Installing Coldbox
 Below are some commands for installing Coldbox.
 
 
+## References
+
+* https://docs.djangoproject.com/en/4.2/howto/initial-data/#provide-data-with-fixtures
+
+
 ## Prepare a directory to use for the installation
 
 * mkdir ~/workspace
-
 * cd ~/workspace
 
 
 ## Clone the repository
 
 * git clone https://github.com/patrickwayodi/coldbox.git
-
 * cd coldbox
 
 
 ## Install Python
 
 * sudo apt-get update
-
 * sudo apt-get install python3
 
 
 ## Create a PYthon virtual environment and install Coldbox's dependencies
 
 * python3 -m venv ~/virtualenvs/coldbox
-
 * source ~/virtualenvs/coldbox/bin/activate
-
 * pip install --upgrade pip wheel
-
 * pip install --upgrade -r src/requirements.txt
 
 
 ## Propagate the changes made to the database models into your database schema
 
 * cd src
-
 * python manage.py makemigrations
-
 * python manage.py migrate
 
 
@@ -54,28 +51,19 @@ Below are some commands for installing Coldbox.
 ## Load data from the Django Fixtures
 
 * python manage.py loaddata accounts.json
-
 * python manage.py loaddata assets.json
-
 * python manage.py loaddata gatepasses.json
 
 
 ## Run the tests
 
 * python manage.py test apps.accounts.tests
-
 * python manage.py test apps.assets.tests
-
 * python manage.py test apps.gatepasses.tests
 
 
 ## Run the project
 
 * python manage.py runserver
-
 * Open http://127.0.0.1:8000 on your browser.
-
-
-## References
-
-* https://docs.djangoproject.com/en/4.2/howto/initial-data/#provide-data-with-fixtures
+* The default users are "janedoe", "johndoe", and "demo". Their password is "django123".

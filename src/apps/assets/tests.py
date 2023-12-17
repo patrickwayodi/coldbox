@@ -2,7 +2,7 @@
 https://docs.djangoproject.com/en/4.0/topics/testing/tools.html
 
 Run the test as follows:
-manage.py test assets.tests
+python manage.py test apps.assets.tests
 """
 
 
